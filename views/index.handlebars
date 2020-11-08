@@ -1,28 +1,42 @@
-<div class="container">
-  <div class="jumbotron">
-    <h1>Burgers!</h1>
+<div class="container bg-warning pb-5">
+  <div class="bg-warning text-center mt-0">
+    <img src="../assets/img/burger.png" class="text-center w-40" />
+    <h1 class="text-danger m-3">Eat-Da-Burger!</h1>
   </div>
-  <ul>
-    {{#each burger}}
-    {{> burgers/burger-block}}
-    {{/each}}
-  </ul>
-
-  <h2>Add a Burger</h2>
-  <form class="create-form">
-
-    <div class="form-group">
-      <label for="bu">Burger Name:</label>
-      <input type="text" id="bu" name="name">
+  <div class="row">
+    <div class="col-md-6">
+      {{#each burger}}
+      {{#unless devoured}}
+      {{> burgers/burger-block}}
+      {{/unless}}
+      {{/each}}
     </div>
-
-    <div class="form-group">
-      <label for="devo">Devoured?</label><br>
-      <input type="radio" name="devoured" value="1" checked> Devoured!<br>
-      <input type="radio" name="devoured" value="0"> Not Devoured
+    <div class="col-md-6 delivered">
+      {{#each burger}}
+      {{#if devoured}}
+      {{> burgers/burger-block}}
+      {{/if}}
+      {{/each}}
     </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h2>Order a Burger</h2>
+      <form class="create-form">
 
-    <button type="submit">Add Burger</button>
-  </form>
+        <div class="form-group">
+          <label for="bu">Burger Name:</label>
+          <input type="text" id="bu" name="name">
+        </div>
 
+        {{!-- <div class="form-group">
+        <label for="devo">Devoured?</label><br>
+        <input type="radio" name="devoured" value="1" checked> Devoured!<br>
+        <input type="radio" name="devoured" value="0"> Not Devoured
+      </div> --}}
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
 </div>
