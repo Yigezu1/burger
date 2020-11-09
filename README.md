@@ -9,6 +9,8 @@
   
   This application used MVC programming paradime and used to add a burger. We can add burger in the app and we can also devoure the burgers. This application is a fullstuck application.
 
+![burgerapp](https://user-images.githubusercontent.com/42190239/98489135-bd83bc80-21fa-11eb-9e5b-3fca5a2c200e.PNG)
+
 
   ## Table of Contents
 
