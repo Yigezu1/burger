@@ -4,14 +4,14 @@
     <h1 class="text-danger m-3">Eat-Da-Burger!</h1>
   </div>
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-6 m-3">
       {{#each burger}}
       {{#unless devoured}}
       {{> burgers/burger-block}}
       {{/unless}}
       {{/each}}
     </div>
-    <div class="col-md-6 delivered">
+    <div class="col-md-6 delivered m-3">
       {{#each burger}}
       {{#if devoured}}
       {{> burgers/burger-block}}
