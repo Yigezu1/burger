@@ -1,28 +1,29 @@
-<header class="container d-sm-flex mr-xs-0 ml-xs-0 bg-warning pb-5">
+<div class="container bg-warning mr-xs-0 ml-xs-0 pb-5">
+  <header>
   <div class="bg-warning text-center mt-0">
-    <img src="../assets/img/burger.png" class="text-center w-40" />
+    <img src="../assets/img/burger.png" class="text-center w-50" />
     <h1 class="text-danger m-3">Eat-Da-Burger!</h1>
   </div>
-</header>
-<main class="container d-sm-flex mr-xs-0 ml-xs-0 bg-warning pb-5">
-  <div class="row">
-    <div class="col-md-6 p-3">
+  </header>
+  <main>
+  <section class="row">
+    <div class="col-sm-6 p-3">
       {{#each burger}}
       {{#unless devoured}}
       {{> burgers/burger-block}}
       {{/unless}}
       {{/each}}
     </div>
-    <div class="col-md-6 delivered p-3">
+    <div class="col-sm-6 delivered p-3">
       {{#each burger}}
       {{#if devoured}}
       {{> burgers/burger-block}}
       {{/if}}
       {{/each}}
     </div>
-  </div>
-  <div class="row">
-    <div class="col-md-12 text-center">
+  </section>
+  <section class="row">
+    <div class="col-sm-12 text-center">
       <h2>Add a Burger</h2>
       <form class="create-form">
 
@@ -40,5 +41,6 @@
         <button type="submit">Submit</button>
       </form>
     </div>
-  </div>
-</main>
+  </section>
+  </main>
+</div>
